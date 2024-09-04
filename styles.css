@@ -7,6 +7,7 @@ body {
     background-size: auto;
     background-attachment: fixed;
     color: #333;
+    background-color: black;
 }
 
 header {
@@ -200,6 +201,50 @@ header h1 {
     color: #0073e6;
     text-decoration: none;
     font-size: 1rem;
+}
+
+.section-background {
+    position: relative;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    height: 200px; /* Adjust as needed */
+}
+
+.section-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur level */
+    z-index: -1;
+    transform: scale(1.1); /* Slightly scale the image to hide blur edges */
+}
+
+#Portfolio::before {
+    background-image: url('');
+}
+
+#Qualifications::before {
+    background-image: url('');
+}
+
+#Service::before {
+    background-image: url(''); 
+}
+
+#Passions::before {
+    background-image: url('');
 }
 
 /* footer{
